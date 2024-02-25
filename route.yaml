@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: my-website-route
+spec:
+  to:
+    kind: Service
+    name: my-apache-ubi8
+  port:
+    targetPort: 8080
